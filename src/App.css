@@ -1,0 +1,83 @@
+:root {
+  --white: #ddd;
+}
+
+.game {
+  width: 50vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  aspect-ratio: 1/1;
+  padding: 5px;
+  gap: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game .cell {
+  font-size: 10vmin;
+  border: none;
+  color: var(--white);
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: all;
+  transition-duration: 300ms;
+}
+.game .cell:hover {
+  background-color: #555;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.text {
+  text-align: center;
+  color: #666;
+  margin-top: 7vmin;
+  margin-bottom: 7vmin;
+  font-size: 3vmin;
+}
+
+.button {
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 5px;
+  font-size: 3vmin;
+  padding-inline: 10px;
+  border-radius: 7px;
+  font-weight: bold;
+  background-color: transparent;
+
+  transition: all;
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+}
+.button:hover {
+  color: #444;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  cursor: pointer;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+@media screen and (max-width: 632px) {
+  .game {
+    width: 80vmin;
+  }
+  .text {
+    font-size: 7vmin;
+  }
+  .button {
+    font-size: 5vmin;
+  }
+}
